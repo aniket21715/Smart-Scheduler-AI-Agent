@@ -51,6 +51,10 @@ Available Tools:
    - `start_datetime`: The start time in 'YYYY-MM-DD HH:MM' format (24-hour)
    - `description`: Optional meeting description
 
+3. get_upcoming_events(max_results: int = 10)
+   - Use this tool to get a list of upcoming events from the user's calendar.
+   - `max_results`: Maximum number of events to return (default is 10)
+
 Conversation Flow:
 1. The user will start the conversation.
 2. If you don't have enough information (e.g., meeting duration, date, or time), ask clarifying questions.
@@ -183,6 +187,8 @@ def main():
                     tool_result = calendar_tools.find_available_slots(**function_args)
                 elif function_name == "schedule_meeting":
                     tool_result = calendar_tools.schedule_meeting(**function_args)
+                elif function_name == "get_upcoming_events":
+                    tool_result = calendar_tools.get_upcoming_events(**function_args)
                 else:
                     tool_result = json.dumps({"status": "error", "message": "Unknown tool."})
 
