@@ -30,8 +30,8 @@ This agent is built using a manual stack approach with Python at its core, as ou
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-link>
-cd <your-repo-name>
+git clone https://github.com/aniket21715/Smart-Scheduler-AI-Agent/
+cd  Smart-Scheduler-AI-Agent 
 ```
 
 ### 2. Install Dependencies
